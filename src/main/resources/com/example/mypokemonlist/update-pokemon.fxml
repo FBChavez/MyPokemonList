@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ece9e9;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mypokemonlist.UpdatePokemonController">
+   <children>
+       <ImageView fitHeight="333.0" fitWidth="333.0" layoutX="-26.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+          <image>
+            <Image url="@../../../images/stickerPokeball.png" />
+          </image>
+       </ImageView>
+       <ImageView fitHeight="333.0" fitWidth="333.0" layoutX="294.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+           <image>
+               <Image url="@../../../images/stickerPokeball.png" />
+           </image>
+       </ImageView>
+       <VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" />
+        <TableView fx:id="tableView" layoutX="141.0" layoutY="33.0" prefHeight="301.0" prefWidth="315.0">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" />
+                <TableColumn fx:id="nameColumn" text="Name" />
+                <TableColumn fx:id="typeColumn" text="Type" />
+                <TableColumn fx:id="descriptionColumn" text="Description" />
+            </columns>
+        </TableView>
+
+       <Button fx:id="btnBack" layoutX="530.0" layoutY="24.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #28B67E;" text="Back" textFill="#0d1321">
+           <font>
+               <Font name="Inter Regular" size="12.0" />
+           </font>
+       </Button>
+      <GridPane layoutX="207.0" layoutY="344.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnUpdate" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #28B67E;" text="Update" textFill="#0d1321" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Inter Semi Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#handleDeletePokemon" prefWidth="75.0" style="-fx-background-color: #28B67E;" text="Delete" textFill="#0d1321" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Inter Semi Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

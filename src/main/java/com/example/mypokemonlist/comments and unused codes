@@ -1,0 +1,36 @@
+public class UpdateData {
+
+    // AUTO_INCREMENT: the last max number in their own system will be the basis
+    public static void main(String[] args) {
+        try (Connection c = MySQLConnection.getConnection();
+             PreparedStatement statement = c.prepareStatement(
+                     "UPDATE users SET name=? WHERE id=?"
+             )) {
+            String new_name = "Jay Vince Gwapo";
+
+            // int new_id = 3; // If you want to update the id
+            int id = 2;
+
+//            String email = "jayvince.serato@gmail.com";
+
+            statement.setString(1, new_name);
+            statement.setInt(2, id);
+            int rowsUpdated = statement.executeUpdate();
+            System.out.println("Rows Updated: " + rowsUpdated);
+
+//            ResultSet res = statement.getResultSet();
+//            while (res.next()) {
+//                int id2 = res.getInt("id");
+//                String name = res.getString("name");
+//                String email = res.getString(3);
+//                System.out.println("ID: " + id2 +
+//                        "\nName: " + name +
+//                        "\nEmail: " + email +
+//                        "\n");
+//            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
