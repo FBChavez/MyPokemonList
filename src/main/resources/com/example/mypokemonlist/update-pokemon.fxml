@@ -7,23 +7,23 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ece9e9;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mypokemonlist.UpdatePokemonController">
    <children>
-       <ImageView fitHeight="333.0" fitWidth="333.0" layoutX="-26.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+       <ImageView fitHeight="333.0" fitWidth="333.0" layoutX="-78.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
           <image>
             <Image url="@../../../images/stickerPokeball.png" />
           </image>
        </ImageView>
-       <ImageView fitHeight="333.0" fitWidth="333.0" layoutX="294.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+       <ImageView fitHeight="333.0" fitWidth="333.0" layoutX="358.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
            <image>
                <Image url="@../../../images/stickerPokeball.png" />
            </image>
        </ImageView>
        <VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" />
-        <TableView fx:id="tableView" layoutX="141.0" layoutY="33.0" prefHeight="301.0" prefWidth="315.0">
+        <TableView fx:id="tableView" layoutX="89.0" layoutY="45.0" prefHeight="287.0" prefWidth="435.0">
             <columns>
                 <TableColumn fx:id="idColumn" text="ID" />
                 <TableColumn fx:id="nameColumn" text="Name" />
                 <TableColumn fx:id="typeColumn" text="Type" />
-                <TableColumn fx:id="descriptionColumn" text="Description" />
+                <TableColumn fx:id="descriptionColumn" prefWidth="194.3999816894531" text="Description" />
             </columns>
         </TableView>
 
@@ -41,7 +41,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btnUpdate" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #28B67E;" text="Update" textFill="#0d1321" GridPane.halignment="CENTER">
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#handleUpdatePokemon" prefWidth="75.0" style="-fx-background-color: #28B67E;" text="Update" textFill="#0d1321" GridPane.halignment="CENTER">
                <font>
                   <Font name="Inter Semi Bold" size="12.0" />
                </font>

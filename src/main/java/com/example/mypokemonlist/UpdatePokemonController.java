@@ -53,6 +53,42 @@ public class UpdatePokemonController {
     }
 
     @FXML
+    void handleUpdatePokemon() {
+        Pokemon selectedPokemon = tableView.getSelectionModel().getSelectedItem();
+
+        if (selectedPokemon != null) {
+            editSelectedPokemon(selectedPokemon);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("No Pokemon Selected");
+            alert.setHeaderText(null);
+            alert.setContentText("Please select a Pokemon to update.");
+            alert.showAndWait();
+        }
+    }
+
+    @FXML
+    void editSelectedPokemon(Pokemon selectedPokemon) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("update-selected-pokemon.fxml"));
+            Parent root = fxmlLoader.load();
+
+            UpdateSelectedPokemonController controller = fxmlLoader.getController();
+            controller.initData(selectedPokemon);
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait(); // Show the update-selected-pokemon.fxml as a modal window
+
+            tableView.getItems().clear();
+            populateTable();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    @FXML
     private void handleDeletePokemon() {
         Pokemon selectedPokemon = tableView.getSelectionModel().getSelectedItem();
         if (selectedPokemon != null) {
