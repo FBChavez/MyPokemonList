@@ -45,6 +45,7 @@ public class AdminPageController {
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
 
             stage.show();
 
@@ -63,6 +64,7 @@ public class AdminPageController {
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
 
             stage.show();
 

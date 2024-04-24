@@ -22,13 +22,13 @@
          </columns>
       </TableView>
 
-      <Button fx:id="btnRemove" layoutX="476.0" layoutY="353.0" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #D3DEDC;" text="Remove" textFill="#0d1321" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+      <Button fx:id="btnRemove" layoutX="476.0" layoutY="353.0" mnemonicParsing="false" onAction="#handleRemovePokemon" prefWidth="75.0" style="-fx-background-color: #D3DEDC;" text="Remove" textFill="#0d1321" GridPane.columnIndex="1" GridPane.halignment="CENTER">
          <font>
             <Font name="Inter Semi Bold" size="12.0" />
          </font>
       </Button>
 
-      <Button fx:id="btnAdd" layoutX="59.0" layoutY="152.0" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #D3DEDC;" text="Add" textFill="#0d1321" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+      <Button fx:id="btnAdd" layoutX="59.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleAddPokemon" prefWidth="75.0" style="-fx-background-color: #D3DEDC;" text="Add" textFill="#0d1321" GridPane.columnIndex="1" GridPane.halignment="CENTER">
          <font>
             <Font name="Inter Semi Bold" size="12.0" />
          </font>

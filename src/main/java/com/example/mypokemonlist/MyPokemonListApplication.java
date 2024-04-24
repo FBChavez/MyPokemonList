@@ -19,8 +19,10 @@ public class MyPokemonListApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(MyPokemonListApplication.class.getResource("welcome-screen.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setTitle("MyPokemonList");
+
         stage.setScene(scene);
         stage.setResizable(false);
+
         stage.show();
     }
 }

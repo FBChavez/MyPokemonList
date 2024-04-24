@@ -28,6 +28,8 @@ public class WelcomeScreenController {
             stage.show();
 
             Stage welcomeStage = (Stage) btnSignUp.getScene().getWindow();
+            stage.setResizable(false);
+
             welcomeStage.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -46,6 +48,8 @@ public class WelcomeScreenController {
             stage.show();
 
             Stage welcomeStage = (Stage) btnLogIn.getScene().getWindow();
+            stage.setResizable(false);
+
             welcomeStage.close();
         } catch (IOException e) {
             e.printStackTrace();

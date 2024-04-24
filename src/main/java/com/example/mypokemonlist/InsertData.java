@@ -11,6 +11,8 @@ public class InsertData {
              PreparedStatement statement = c.prepareStatement(
                      "INSERT INTO tblUser (username, password, firstname, lastname, email) VALUES (?,?,?,?,?)"
              )) {
+            c.setAutoCommit(false);
+
             statement.setString(1, username);
             statement.setString(2, password);
             statement.setString(3, firstname);
@@ -19,8 +21,16 @@ public class InsertData {
             int rowsInserted = statement.executeUpdate();
 
             System.out.println("Rows Inserted in tblUser: " + rowsInserted);
+
+            c.commit();
         } catch (SQLException e) {
             e.printStackTrace();
+
+            try (Connection c = MySQLConnection.getConnection()) {
+                c.rollback();
+            } catch (SQLException rollbackException) {
+                rollbackException.printStackTrace();
+            }
         }
     }
 
@@ -40,6 +50,20 @@ public class InsertData {
             statement.setString(3, description);
             int rowsInserted = statement.executeUpdate();
             System.out.println("Rows Inserted in tblPokemon: " + rowsInserted);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insertUserPokemon(int userId, int pokemonId) {
+        try (Connection c = MySQLConnection.getConnection();
+             PreparedStatement statement = c.prepareStatement(
+                     "INSERT INTO tblUserPokemon (user_id, pokemon_id) VALUES (?, ?)"
+             )){
+            statement.setInt(1, userId);
+            statement.setInt(2, pokemonId);
+            int rowsInserted = statement.executeUpdate();
+            System.out.println("Rows Inserted in tblUserPokemon: " + rowsInserted);
         } catch (SQLException e) {
             e.printStackTrace();
         }

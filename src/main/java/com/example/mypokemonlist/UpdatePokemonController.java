@@ -78,6 +78,7 @@ public class UpdatePokemonController {
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.showAndWait(); // Show the update-selected-pokemon.fxml as a modal window
 
             tableView.getItems().clear();
@@ -120,6 +121,7 @@ public class UpdatePokemonController {
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
 
             stage.show();
 

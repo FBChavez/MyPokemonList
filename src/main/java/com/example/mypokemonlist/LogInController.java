@@ -33,43 +33,42 @@ public class LogInController {
         String username = tfUsername.getText();
         String password = pfPassword.getText();
 
+        User user = ReadData.getUserData(username, password);
+
         if(ReadData.readUserData(username, password)) {
             tfUsername.clear();
             pfPassword.clear();
 
             lblNote.setText("Login successful!");
 
+            FXMLLoader fxmlLoader;
+            Parent root = null;
             if (username.equals("francis") && password.equals("chavez")) {
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("admin-page.fxml"));
-                    Parent root = fxmlLoader.load();
-
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(root));
-
-                    stage.show();
-
-                    Stage loginStage = (Stage) btnLogIn.getScene().getWindow();
-                    loginStage.close();
+                    fxmlLoader = new FXMLLoader(getClass().getResource("admin-page.fxml"));
+                    root = fxmlLoader.load();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             } else {
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("home-page.fxml"));
-                    Parent root = fxmlLoader.load();
-
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(root));
-
-                    stage.show();
-
-                    Stage loginStage = (Stage) btnLogIn.getScene().getWindow();
-                    loginStage.close();
+                    fxmlLoader = new FXMLLoader(getClass().getResource("home-page.fxml"));
+                    root = fxmlLoader.load();
+                    HomePageController homeController = fxmlLoader.getController();
+                    homeController.initData(user);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+
+            stage.show();
+
+            Stage loginStage = (Stage) btnLogIn.getScene().getWindow();
+            loginStage.close();
         } else {
             lblNote.setText("Invalid username/password!");
         }
@@ -86,6 +85,7 @@ public class LogInController {
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
 
             stage.show();
 

@@ -68,6 +68,7 @@ public class SignUpController {
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
 
             stage.show();
 
@@ -92,6 +93,7 @@ public class SignUpController {
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
 
             stage.show();
 

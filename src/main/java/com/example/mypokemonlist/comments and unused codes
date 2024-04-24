@@ -1,3 +1,8 @@
+c.setAutoCommit(false);
+c.rollback();
+c.commit();
+
+
 public class UpdateData {
 
     // AUTO_INCREMENT: the last max number in their own system will be the basis
