@@ -29,39 +29,39 @@
             <children>
                 <Label alignment="CENTER" text="Sign Up Form" textFill="#0d1321" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <font>
-                        <Font name="Inter Semi Bold" size="24.0" />
+                        <Font name="Franklin Gothic Book" size="30.0" />
                     </font>
                <padding>
                   <Insets bottom="20.0" />
                </padding></Label>
                 <Label text="First Name:" textFill="#0d1321" GridPane.rowIndex="1">
                <font>
-                  <Font name="Inter Regular" size="12.0" />
+                  <Font name="Franklin Gothic Book" size="18.0" />
                </font></Label>
                 <TextField id="tfFirstName" fx:id="tfFirstName" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #D3DEDC; -fx-border-style: solid;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
                 <Label text="Last Name:" textFill="#0d1321" GridPane.rowIndex="2">
                <font>
-                  <Font name="Inter Regular" size="12.0" />
+                  <Font name="Franklin Gothic Book" size="18.0" />
                </font></Label>
                 <TextField id="tfLastName" fx:id="tfLastName" style="-fx-background-color: #D3DEDC; -fx-border-style: solid;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
                 <Label text="Email:" textFill="#0d1321" GridPane.rowIndex="3">
                <font>
-                  <Font name="Inter Regular" size="12.0" />
+                  <Font name="Franklin Gothic Book" size="18.0" />
                </font></Label>
                 <TextField id="tfEmail" fx:id="tfEmail" style="-fx-background-color: #D3DEDC; -fx-border-style: solid;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
                 <Label text="Username:" textFill="#0d1321" GridPane.rowIndex="4">
                <font>
-                  <Font name="Inter Regular" size="12.0" />
+                  <Font name="Franklin Gothic Book" size="18.0" />
                </font></Label>
                 <TextField id="tfUsername" fx:id="tfUsername" style="-fx-background-color: #D3DEDC; -fx-border-style: solid;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
                 <Label text="Password:" textFill="#0d1321" GridPane.rowIndex="5">
                <font>
-                  <Font name="Inter Regular" size="12.0" />
+                  <Font name="Franklin Gothic Book" size="18.0" />
                </font></Label>
                 <PasswordField id="pfPassword" fx:id="pfPassword" style="-fx-background-color: #D3DEDC; -fx-border-style: solid;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
                 <Button id="btnRegister" fx:id="btnRegister" mnemonicParsing="false" onAction="#handleRegister" prefWidth="100.0" style="-fx-background-color: #28B67E;" text="Register" textFill="#0d1321" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                <font>
-                  <Font name="Inter Regular" size="12.0" />
+                  <Font name="Franklin Gothic Book" size="14.0" />
                </font>
                <GridPane.margin>
                   <Insets />
@@ -82,7 +82,7 @@
          </image></ImageView>
       <Button fx:id="btnBack" layoutX="458.0" layoutY="30.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #28B67E;" text="Back" textFill="#0d1321">
          <font>
-            <Font name="Inter Regular" size="12.0" />
+            <Font name="Franklin Gothic Book" size="14.0" />
          </font>
       </Button>
     </children>

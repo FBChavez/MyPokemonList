@@ -26,24 +26,24 @@
             <children>
                 <Label alignment="CENTER" text=" Log in to your account" textFill="#0d1321" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <font>
-                        <Font name="Inter Semi Bold" size="24.0" />
+                        <Font name="Franklin Gothic Book" size="30.0" />
                     </font>
                     <padding>
                         <Insets bottom="20.0" />
                     </padding></Label>
                 <Label text="Username:" textFill="#0d1321" GridPane.rowIndex="1">
                     <font>
-                        <Font name="Inter Regular" size="12.0" />
+                        <Font name="Franklin Gothic Book" size="18.0" />
                     </font></Label>
                 <TextField id="tfUsername" fx:id="tfUsername" style="-fx-background-color: #D3DEDC; -fx-border-style: solid;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
                 <Label text="Password:" textFill="#0d1321" GridPane.rowIndex="2">
                     <font>
-                        <Font name="Inter Regular" size="12.0" />
+                        <Font name="Franklin Gothic Book" size="18.0" />
                     </font></Label>
                 <PasswordField id="pfPassword" fx:id="pfPassword" style="-fx-background-color: #D3DEDC; -fx-border-style: solid;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
                 <Button id="btnRegister" fx:id="btnLogIn" mnemonicParsing="false" onAction="#handleLogin" prefWidth="100.0" style="-fx-background-color: #28B67E;" text="Log In" textFill="#0d1321" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                     <font>
-                        <Font name="Inter Regular" size="12.0" />
+                        <Font name="Franklin Gothic Book" size="14.0" />
                     </font>
                     <GridPane.margin>
                         <Insets />
@@ -64,7 +64,7 @@
             </image></ImageView>
         <Button fx:id="btnBack" layoutX="458.0" layoutY="30.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #28B67E;" text="Back" textFill="#0d1321">
             <font>
-                <Font name="Inter Regular" size="12.0" />
+                <Font name="Franklin Gothic Book" size="14.0" />
             </font>
         </Button>
     </children>

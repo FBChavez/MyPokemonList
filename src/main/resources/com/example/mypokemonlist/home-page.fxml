@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #86b243;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mypokemonlist.HomePageController">
    <children>
-      <ImageView fitHeight="166.0" fitWidth="128.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="166.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/homepage.jpg" />
          </image>
@@ -24,36 +24,41 @@
 
       <Button fx:id="btnRemove" layoutX="476.0" layoutY="353.0" mnemonicParsing="false" onAction="#handleRemovePokemon" prefWidth="75.0" style="-fx-background-color: #D3DEDC;" text="Remove" textFill="#0d1321" GridPane.columnIndex="1" GridPane.halignment="CENTER">
          <font>
-            <Font name="Inter Semi Bold" size="12.0" />
+            <Font name="Franklin Gothic Book" size="14.0" />
          </font>
       </Button>
 
       <Button fx:id="btnAdd" layoutX="59.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleAddPokemon" prefWidth="75.0" style="-fx-background-color: #D3DEDC;" text="Add" textFill="#0d1321" GridPane.columnIndex="1" GridPane.halignment="CENTER">
          <font>
-            <Font name="Inter Semi Bold" size="12.0" />
+            <Font name="Franklin Gothic Book" size="14.0" />
          </font>
       </Button>
 
       <Button fx:id="btnBack" layoutX="530.0" layoutY="24.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #D3DEDC;" text="Back" textFill="#0d1321">
          <font>
-            <Font name="Inter Regular" size="12.0" />
+            <Font name="Franklin Gothic Book" size="14.0" />
          </font>
       </Button>
 
       <Label fx:id="lblHello" layoutX="37.0" layoutY="35.0" prefHeight="23.0" prefWidth="482.0" text="Hello Pokemon Trainer name." textFill="#0d1321">
          <font>
-            <Font name="Inter Semi Bold" size="18.0" />
+            <Font name="Franklin Gothic Book" size="18.0" />
          </font>
       </Label>
       <Label layoutX="20.0" layoutY="91.0" prefHeight="23.0" prefWidth="159.0" text="Add a Pokemon to List:" textFill="#0d1321">
          <font>
-            <Font name="Inter Regular" size="14.0" />
+            <Font name="Franklin Gothic Book" size="14.0" />
          </font>
       </Label>
       <Label layoutX="194.0" layoutY="353.0" prefHeight="23.0" prefWidth="309.0" text="Remove selected Pokemon in favourites." textFill="#0d1321">
          <font>
-            <Font name="Inter Regular" size="14.0" />
+            <Font name="Franklin Gothic Book" size="14.0" />
          </font>
       </Label>
+      <ImageView fitHeight="173.0" fitWidth="150.0" layoutX="32.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/sticker11.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
