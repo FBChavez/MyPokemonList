@@ -18,9 +18,10 @@ public class ReadData {
                 int id = res.getInt("user_id");
                 String firstName = res.getString("firstname");
                 String lastName = res.getString("lastname");
+                String email = res.getString("email");
 
                 System.out.println("Successful getUserData!");
-                return new User(id, username, password, firstName, lastName);
+                return new User(id, username, password, firstName, lastName, email);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -112,5 +113,31 @@ public class ReadData {
         }
 
         return pokemonList;
+    }
+
+    public static List<User> getAllUser() {
+        List<User> userList = new ArrayList<>();
+
+        try (Connection c = MySQLConnection.getConnection();
+             Statement statement = c.createStatement()) {
+            String query = "SELECT * FROM tblUser";
+            ResultSet resultSet = statement.executeQuery(query);
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("user_id");
+                String username = resultSet.getString("username");
+                String password = resultSet.getString("password");
+                String firstname = resultSet.getString("firstname");
+                String lastname = resultSet.getString("lastname");
+                String email = resultSet.getString("email");
+
+                User user = new User(id, username, password, firstname, lastname, email);
+                userList.add(user);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return userList;
     }
 }

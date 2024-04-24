@@ -38,6 +38,11 @@
                <font>
                   <Font name="Inter Regular" size="18.0" />
                </font></Button>
+            <ImageView fitHeight="75.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../../../images/stickerPokeball.png" />
+               </image>
+            </ImageView>
          </children>
       </GridPane>
    </children>

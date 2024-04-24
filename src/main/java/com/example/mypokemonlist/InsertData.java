@@ -18,8 +18,8 @@ public class InsertData {
             statement.setString(3, firstname);
             statement.setString(4, lastname);
             statement.setString(5, email);
-            int rowsInserted = statement.executeUpdate();
 
+            int rowsInserted = statement.executeUpdate();
             System.out.println("Rows Inserted in tblUser: " + rowsInserted);
 
             c.commit();
@@ -45,13 +45,24 @@ public class InsertData {
              PreparedStatement statement = c.prepareStatement(
                      "INSERT INTO tblPokemon (name, type, description) VALUES (?,?,?)"
              )) {
+            c.setAutoCommit(false);
+
             statement.setString(1, name);
             statement.setString(2, type);
             statement.setString(3, description);
+
             int rowsInserted = statement.executeUpdate();
             System.out.println("Rows Inserted in tblPokemon: " + rowsInserted);
+
+            c.commit();
         } catch (SQLException e) {
             e.printStackTrace();
+
+            try (Connection c = MySQLConnection.getConnection()) {
+                c.rollback();
+            } catch (SQLException rollbackException) {
+                rollbackException.printStackTrace();
+            }
         }
     }
 
@@ -60,12 +71,23 @@ public class InsertData {
              PreparedStatement statement = c.prepareStatement(
                      "INSERT INTO tblUserPokemon (user_id, pokemon_id) VALUES (?, ?)"
              )){
+            c.setAutoCommit(false);
+
             statement.setInt(1, userId);
             statement.setInt(2, pokemonId);
+
             int rowsInserted = statement.executeUpdate();
             System.out.println("Rows Inserted in tblUserPokemon: " + rowsInserted);
+
+            c.commit();
         } catch (SQLException e) {
             e.printStackTrace();
+
+            try (Connection c = MySQLConnection.getConnection()) {
+                c.rollback();
+            } catch (SQLException rollbackException) {
+                rollbackException.printStackTrace();
+            }
         }
     }
 
@@ -80,6 +102,13 @@ public class InsertData {
             return resultSet.next();
         } catch (SQLException e) {
             e.printStackTrace();
+
+            try (Connection c = MySQLConnection.getConnection()) {
+                c.rollback();
+            } catch (SQLException rollbackException) {
+                rollbackException.printStackTrace();
+            }
+
             return false;
         }
     }

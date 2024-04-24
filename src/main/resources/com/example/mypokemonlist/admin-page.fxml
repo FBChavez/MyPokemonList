@@ -28,11 +28,15 @@
                <font>
                   <Font name="Inter Semi Bold" size="22.0" />
                </font></Text>
-            <Button fx:id="btnAddPokemon" mnemonicParsing="false" onAction="#handleAddPokemon" prefWidth="200.0" style="-fx-background-color: #28B67E;" text="Add Pokemon" textAlignment="CENTER" textFill="#0d1321" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <Button fx:id="btnAddPokemon" mnemonicParsing="false" onAction="#handleAddPokemon" prefWidth="200.0" style="-fx-background-color: #28B67E;" text="Add Pokemon" textAlignment="CENTER" textFill="#0d1321" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <font>
                   <Font name="Inter Regular" size="18.0" />
                </font></Button>
-            <Button fx:id="btnUpdatePokemon" mnemonicParsing="false" onAction="#handleUpdatePokemon" prefWidth="200.0" style="-fx-background-color: #28B67E;" text="Update List" textAlignment="CENTER" textFill="#0d1321" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <Button fx:id="btnUpdatePokemon" mnemonicParsing="false" onAction="#handleUpdatePokemon" prefWidth="200.0" style="-fx-background-color: #28B67E;" text="Update List" textAlignment="CENTER" textFill="#0d1321" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Inter Regular" size="18.0" />
+               </font></Button>
+            <Button fx:id="btnUpdateUser" mnemonicParsing="false" onAction="#handleUpdateUser" prefWidth="200.0" style="-fx-background-color: #28B67E;" text="Update Users" textAlignment="CENTER" textFill="#0d1321" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                <font>
                   <Font name="Inter Regular" size="18.0" />
                </font></Button>
