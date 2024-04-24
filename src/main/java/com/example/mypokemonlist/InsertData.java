@@ -7,6 +7,11 @@ import java.sql.SQLException;
 
 public class InsertData {
     public static void insertUserData(String username, String password, String firstname, String lastname, String email) {
+        if (ReadData.userExists(username, password)) {
+            System.out.println("User already exists in the database.");
+            return;
+        }
+
         try (Connection c = MySQLConnection.getConnection();
              PreparedStatement statement = c.prepareStatement(
                      "INSERT INTO tblUser (username, password, firstname, lastname, email) VALUES (?,?,?,?,?)"
@@ -33,6 +38,8 @@ public class InsertData {
             }
         }
     }
+
+
 
     public static void insertPokemonData(String name, String type, String description) {
 

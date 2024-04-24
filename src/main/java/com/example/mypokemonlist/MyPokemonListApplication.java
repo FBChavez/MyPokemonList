@@ -15,6 +15,7 @@ public class MyPokemonListApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         CreateTable.createTables();
+        InsertData.insertUserData("francis", "chavez", "Francis Benedict", "Chavez", "francis@gmail.com");
 
         FXMLLoader fxmlLoader = new FXMLLoader(MyPokemonListApplication.class.getResource("welcome-screen.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
